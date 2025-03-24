@@ -9,7 +9,16 @@
 {% block content %}
     <div class="features">
         <h1>Новини з сайту</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, maiores quos? Iste, dicta. Maiores, voluptatum sit aut alias praesentium non quas consectetur eius distinctio molestiae eum ea, eos dolor commodi.</p>
-        <button class="btn btn-warning">{% filter upper %}На сторінку про нас{% endfilter %}</button>
+        {% if news %}
+            {%for el in news%}
+                <div class="alert alert-warning">
+                    <h3>{{el.title}}</h3>
+                    <p>{{el.anons}}</p>
+                    <p>{{el.date}}</p>
+                </div>
+            {% endfor %}
+            {%else%}
+            <p>У вас поки немає записів</p>
+        {% endif %}
     </div>
 {% endblock  %}

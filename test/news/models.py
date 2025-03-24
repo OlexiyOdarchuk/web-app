@@ -9,6 +9,9 @@ class Articles(models.Model):
     full_text = models.TextField('Новина')
     date = models.DateTimeField('Дата публікації')
     
+    def __str__(self):
+        return f"Новина: {self.title}"
+    
     class Meta:
         verbose_name = 'Новина'
         verbose_name_plural = 'Новини'
