@@ -1,0 +1,15 @@
+{% extends "main/layout.html" %}
+
+{% block title %}
+Новини з сайту
+{% endblock%}
+
+
+
+{% block content %}
+    <div class="features">
+        <h1>Новини з сайту</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, maiores quos? Iste, dicta. Maiores, voluptatum sit aut alias praesentium non quas consectetur eius distinctio molestiae eum ea, eos dolor commodi.</p>
+        <button class="btn btn-warning">{% filter upper %}На сторінку про нас{% endfilter %}</button>
+    </div>
+{% endblock  %}
